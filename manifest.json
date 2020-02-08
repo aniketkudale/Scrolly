@@ -1,6 +1,6 @@
 {
   "name": "Scrolly",
-  "version": "1.0",
+  "version": "1.3",
   "description": "Scroll to the top of the Webpages with single click",
   "icons": {
     "16": "icons/icon16.png",
@@ -13,8 +13,8 @@
     "default_icon": "icons/icon128.png"
   },
   "permissions": [
-    "activeTab",
-    "<all_urls>"
+    "http://*/*",
+	"https://*/*"
   ],
   "manifest_version": 2,
   "web_accessible_resources": [
@@ -23,7 +23,8 @@
   "content_scripts": [{
     "run_at": "document_start",
     "matches": [
-      "<all_urls>"
+      "http://*/*",
+	  "https://*/*"
     ],
     "css": [
       "style/style.css"
